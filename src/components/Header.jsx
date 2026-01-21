@@ -38,7 +38,7 @@ export default function Header({ onSearch = () => {} }) {
                 className={headerStyles.logoTitle}
                 style={{ fontFamily: "'Eczar', serif" }}
               >
-                Cricket Buzzed
+                CrickBuzzed
               </div>
             </div>
           </div>
