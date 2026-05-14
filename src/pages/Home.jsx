@@ -206,14 +206,31 @@ export default function Home() {
             <div className={homeStyles.heroShadow} style={{ boxShadow: '0 8px 30px rgba(14, 30, 50, 0.06)', borderRadius: '24px' }} />
 
             {/* 3D-style images (bat + ball) - CSS classes control responsive position/size/depth */}
-            <img src={bat} alt="bat" className="hero-bat" aria-hidden
+            {/* <img src={bat} alt="bat" className="hero-bat" aria-hidden
   width={288}
   height={316} />
             <img src={ball} alt="ball" className="hero-ball" aria-hidden="true"
   width={68}
   height={45} fetchpriority="high"
-   />
-   
+   /> */}
+   <img
+  src={bat}
+  alt="bat"
+  className="hero-bat"
+  aria-hidden="true"
+  width={420}
+  height={460}
+  fetchpriority="high"
+/>
+<img
+  src={ball}
+  alt="ball"
+  className="hero-ball"
+  aria-hidden="true"
+  width={196}
+  height={131}
+  fetchpriority="high"
+/>
           </div>
         </section>
 
