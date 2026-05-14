@@ -7,8 +7,8 @@ import UpcomingMatches from '../components/UpcomingMatches';
 import MatchDetail from '../components/MatchDetail';
 import Scoreboard from '../components/ScoreBoard';
 import Loader from '../components/Loader';
-import ball from '../assets/ball.png';
-import bat from '../assets/bat.png';
+import ball from '../assets/ball.webp';
+import bat from '../assets/bat.webp';
 import { getLiveMatches } from '../api/cricApi';
 import { homeStyles } from '../assets/dummyStyles';
 
@@ -206,8 +206,14 @@ export default function Home() {
             <div className={homeStyles.heroShadow} style={{ boxShadow: '0 8px 30px rgba(14, 30, 50, 0.06)', borderRadius: '24px' }} />
 
             {/* 3D-style images (bat + ball) - CSS classes control responsive position/size/depth */}
-            <img src={bat} alt="bat" className="hero-bat" aria-hidden />
-            <img src={ball} alt="ball" className="hero-ball" aria-hidden />
+            <img src={bat} alt="bat" className="hero-bat" aria-hidden
+  width={288}
+  height={316} />
+            <img src={ball} alt="ball" className="hero-ball" aria-hidden="true"
+  width={68}
+  height={45} fetchpriority="high"
+   />
+   
           </div>
         </section>
 

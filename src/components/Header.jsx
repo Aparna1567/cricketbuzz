@@ -1,6 +1,6 @@
 // src/components/Header.jsx
 import React, { useEffect, useState } from 'react';
-import logo from '../assets/logo.png';
+import logo from '../assets/logo.webp';
 import { headerStyles } from '../assets/dummyStyles';
 
 export default function Header({ onSearch = () => {} }) {
@@ -30,7 +30,9 @@ export default function Header({ onSearch = () => {} }) {
           {/* left: logo */}
           <div className={headerStyles.logoContainer}>
             <div className={headerStyles.logoImage}>
-              <img src={logo} alt="Cricket Fever logo" className={headerStyles.logoImg} />
+              <img src={logo} alt="Cricket Fever logo" className={headerStyles.logoImg} width={140}
+  height={140}
+  loading="eager" />
             </div>
 
             <div className={headerStyles.logoText}>
