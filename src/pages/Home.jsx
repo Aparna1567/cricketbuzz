@@ -23,15 +23,15 @@ export default function Home() {
   const stylesInjected = useRef(false);
 
   // load Google font "Poppins" once
-  useEffect(() => {
-    const id = 'poppins-google-font';
-    if (document.getElementById(id)) return;
-    const link = document.createElement('link');
-    link.id = id;
-    link.rel = 'stylesheet';
-    link.href = 'https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&display=swap';
-    document.head.appendChild(link);
-  }, []);
+  // useEffect(() => {
+  //   const id = 'poppins-google-font';
+  //   if (document.getElementById(id)) return;
+  //   const link = document.createElement('link');
+  //   link.id = id;
+  //   link.rel = 'stylesheet';
+  //   link.href = 'https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&display=swap';
+  //   document.head.appendChild(link);
+  // }, []);
 
   // --- helpers to handle varied API wrapper shapes ---
   const tryExtract = (resp) => {

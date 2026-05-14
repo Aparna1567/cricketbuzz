@@ -1,5 +1,5 @@
 // src/components/Header.jsx
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import logo from '../assets/logo1.webp';
 import { headerStyles } from '../assets/dummyStyles';
 
@@ -8,15 +8,15 @@ export default function Header({ onSearch = () => {} }) {
   const [q, setQ] = useState('');
 
   // Load Eczar font (Google Fonts) once
-  useEffect(() => {
-    const id = 'eczar-google-font';
-    if (document.getElementById(id)) return;
-    const link = document.createElement('link');
-    link.id = id;
-    link.rel = 'stylesheet';
-    link.href = 'https://fonts.googleapis.com/css2?family=Eczar:wght@600;700&display=swap';
-    document.head.appendChild(link);
-  }, []);
+  // useEffect(() => {
+  //   const id = 'eczar-google-font';
+  //   if (document.getElementById(id)) return;
+  //   const link = document.createElement('link');
+  //   link.id = id;
+  //   link.rel = 'stylesheet';
+  //   link.href = 'https://fonts.googleapis.com/css2?family=Eczar:wght@600;700&display=swap';
+  //   document.head.appendChild(link);
+  // }, []);
 
   function handleSearch(e) {
     e.preventDefault();

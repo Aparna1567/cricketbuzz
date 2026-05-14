@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fontsource/eczar": "^5.2.8",
+    "@fontsource/poppins": "^5.2.7",
     "@tailwindcss/vite": "^4.1.14",
     "axios": "^1.12.2",
     "react": "^19.1.1",
