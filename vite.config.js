@@ -7,4 +7,8 @@ export default defineConfig({
   plugins: [react(),
   tailwindcss(),
   ],
+  build: {
+    assetsInlineLimit: 10240,  
+  }
+
 })

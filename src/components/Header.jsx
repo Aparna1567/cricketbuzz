@@ -1,6 +1,6 @@
 // src/components/Header.jsx
 import React, { useEffect, useState } from 'react';
-import logo from '../assets/logo.webp';
+import logo from '../assets/logo1.webp';
 import { headerStyles } from '../assets/dummyStyles';
 
 export default function Header({ onSearch = () => {} }) {

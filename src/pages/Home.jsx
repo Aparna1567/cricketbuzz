@@ -7,8 +7,8 @@ import UpcomingMatches from '../components/UpcomingMatches';
 import MatchDetail from '../components/MatchDetail';
 import Scoreboard from '../components/ScoreBoard';
 import Loader from '../components/Loader';
-import ball from '../assets/ball.webp';
-import bat from '../assets/bat.webp';
+import ball from '../assets/ball1.webp';
+import bat from '../assets/bat1.webp';
 import { getLiveMatches } from '../api/cricApi';
 import { homeStyles } from '../assets/dummyStyles';
 
