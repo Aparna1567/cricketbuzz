@@ -181,7 +181,7 @@ export default function Home() {
                 <div className={homeStyles.heroText}>
                   <h1
                     className={homeStyles.heroTitle}
-                    style={{ fontFamily: "'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial" }}
+                    style={{ fontFamily: "system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial" }}
                   >
                     Follow every match. <br /> Real-time scores, classy insights.
                   </h1>
