@@ -218,8 +218,8 @@ export default function Home() {
   alt="bat"
   className="hero-bat"
   aria-hidden="true"
-  width={420}
-  height={460}
+  width={210}
+  height={230}
   fetchpriority="high"
 />
 <img
