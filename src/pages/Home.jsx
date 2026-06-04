@@ -1,16 +1,29 @@
 // src/pages/Home.jsx
-import React, { useEffect, useState, useCallback, useRef } from 'react';
+import React, { useEffect, useState, useCallback, useRef,lazy, Suspense } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import LiveMatch from '../components/LiveMatch';
-import UpcomingMatches from '../components/UpcomingMatches';
-import MatchDetail from '../components/MatchDetail';
-import Scoreboard from '../components/ScoreBoard';
+// import UpcomingMatches from '../components/UpcomingMatches';
+// import MatchDetail from '../components/MatchDetail';
+// import Scoreboard from '../components/ScoreBoard';
 import Loader from '../components/Loader';
 import ball from '../assets/ball1.webp';
 import bat from '../assets/bat1.webp';
 import { getLiveMatches } from '../api/cricApi';
 import { homeStyles } from '../assets/dummyStyles';
+
+
+const UpcomingMatches = lazy(() =>
+  import('../components/UpcomingMatches')
+);
+
+const MatchDetail = lazy(() =>
+  import('../components/MatchDetail')
+);
+
+const Scoreboard = lazy(() =>
+  import('../components/ScoreBoard')
+);
 
 export default function Home() {
   const [selectedMatch, setSelectedMatch] = useState(null);
@@ -260,7 +273,10 @@ export default function Home() {
                 <h2 className={homeStyles.sectionTitle}>Upcoming Matches</h2>
                 <div className={homeStyles.sectionSubtitle}>Plan ahead</div>
               </div>
-              <UpcomingMatches onSelect={(id) => onSelectMatch(id)} />
+              {/* <UpcomingMatches onSelect={(id) => onSelectMatch(id)} /> */}
+                <Suspense fallback={<Loader message="Loading upcoming matches..." centered />}>
+  <UpcomingMatches onSelect={(id) => onSelectMatch(id)} />
+</Suspense>
             </div>
           </div>
 
@@ -282,7 +298,10 @@ export default function Home() {
                 ) : (
                   <div>
                     <div className={homeStyles.quickScoreContent}>Match: {selectedMatch}</div>
-                    <Scoreboard matchId={normalizeMatchId(selectedMatch)} />
+                    {/* <Scoreboard matchId={normalizeMatchId(selectedMatch)} /> */}
+                    <Suspense fallback={<Loader message="Loading scoreboard..." centered />}>
+  <Scoreboard matchId={normalizeMatchId(selectedMatch)} />
+</Suspense>
                     <div className="mt-3 flex gap-2">
                       <button
                         onClick={() => {
@@ -314,10 +333,16 @@ export default function Home() {
 
             {selectedMatch && (
               <div className={homeStyles.detailsContent}>
-                <MatchDetail matchId={normalizeMatchId(selectedMatch)} />
+                {/* <MatchDetail matchId={normalizeMatchId(selectedMatch)} /> */}
+                <Suspense fallback={<Loader message="Loading match details..." centered />}>
+  <MatchDetail matchId={normalizeMatchId(selectedMatch)} />
+</Suspense>
                 <div>
                   <div className="text-sm font-medium text-slate-800 mb-3">Scoreboard</div>
-                  <Scoreboard matchId={normalizeMatchId(selectedMatch)} />
+                  {/* <Scoreboard matchId={normalizeMatchId(selectedMatch)} /> */}
+                  <Suspense fallback={<Loader message="Loading scoreboard..." centered />}>
+  <Scoreboard matchId={normalizeMatchId(selectedMatch)} />
+</Suspense>
                 </div>
               </div>
             )}

@@ -155,9 +155,15 @@ export default function UpcomingMatches({ onSelect }) {
 
   if (loading && groups.length === 0) {
     return (
-      <div className={upcomingMatchesStyles.loadingContainer}>
-        <Loader message="Loading upcoming..." />
-      </div>
+      // <div className={upcomingMatchesStyles.loadingContainer}>
+      //   <Loader message="Loading upcoming..." />
+      // </div>
+      <div
+  className={upcomingMatchesStyles.loadingContainer}
+  style={{ minHeight: '700px' }}
+>
+  <Loader message="Loading upcoming..." />
+</div>
     );
   }
   
